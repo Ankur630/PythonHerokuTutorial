@@ -10,7 +10,7 @@ TOKEN = os.environ.get("TELEGRAM_ID")
 def start(update, context):
     yourname = update.message.chat.first_name
 
-    msg = "Hi "+yourname+"! Welcome to mimic bot."
+    msg = "Hi "+yourname+"! Welcome to mimic bot @ankurpro."
     context.bot.send_message(update.message.chat.id, msg)
 
 #Message handler for texts only
@@ -47,7 +47,7 @@ def main():
     #to start webhook
     updater.start_webhook(listen="0.0.0.0",port=os.environ.get("PORT",443),
                           url_path=TOKEN,
-                          webhook_url="https://mimic-app.herokuapp.com/"+TOKEN)
+                          webhook_url="https://mimic-app7233.herokuapp.com/"+TOKEN)
     updater.idle()
 
 #start application with main function
